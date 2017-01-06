@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return App\Post::where('id', '>=', 20)->get();
+    // return view('welcome');
 });
